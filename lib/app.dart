@@ -5,92 +5,94 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  left: 16.0,
-                  right: 16.0
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      'Log In',
-                      style: TextStyle(
-                        fontFamily: 'Monospace',
-                        fontSize: 24
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+          child: Column(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    left: 16.0,
+                    right: 16.0
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Log In',
+                        style: TextStyle(
+                          fontFamily: 'Monospace',
+                          fontSize: 24
+                        ),
                       ),
-                    ),
-                    const SizedBox(
-                      height:20.0
-                    ),
-                    _usernameTextField(),
-                    const SizedBox(
-                      height:15.0
-                    ),
-                    _passwordTextField(),
-                    Row(
-                      children: const [
-                        Text(
-                          'Error',
-                          style: TextStyle(
-                            color: Colors.red
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: null, 
-                          child: Text('Forgot Password?')
-                        ),
-                      ],
-                    ),
-                    ElevatedButton(
-                      onPressed: () {}, 
-                      style: const ButtonStyle(
-                        elevation: MaterialStatePropertyAll(0.0),
-                        minimumSize: MaterialStatePropertyAll(Size.fromHeight(50)),
+                      const SizedBox(
+                        height:20.0
                       ),
-                      child: const Text('Login'),
-                    ),
-                    const SizedBox(
-                      height: 25.0
-                    ),
-                    Row(
-                      children: const [
-                        Expanded(
-                          child: Divider(
-                            height: 0.5, 
-                            color: Colors.black,
+                      _usernameTextField(),
+                      const SizedBox(
+                        height:15.0
+                      ),
+                      _passwordTextField(),
+                      Row(
+                        children: const [
+                          Text(
+                            'Error',
+                            style: TextStyle(
+                              color: Colors.red
+                            ),
                           ),
-                        ),
-                        SizedBox(width: 40.0),
-                        Text('OR'),
-                        SizedBox(width: 40.0),
-                        Expanded(
-                          child: Divider(
-                            height: 0.5, 
-                            color: Colors.black,
+                          TextButton(
+                            onPressed: null, 
+                            child: Text('Forgot Password?')
                           ),
+                        ],
+                      ),
+                      ElevatedButton(
+                        onPressed: () {}, 
+                        style: const ButtonStyle(
+                          elevation: MaterialStatePropertyAll(0.0),
+                          minimumSize: MaterialStatePropertyAll(Size.fromHeight(50)),
                         ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        const Text("Don't have an account?"),
-                        TextButton(
-                          onPressed: () {}, 
-                          child: const Text('Sign Up')
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              )
-            ),
-          ]
+                        child: const Text('Login'),
+                      ),
+                      const SizedBox(
+                        height: 25.0
+                      ),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Divider(
+                              height: 0.5, 
+                              color: Colors.black,
+                            ),
+                          ),
+                          SizedBox(width: 40.0),
+                          Text('OR'),
+                          SizedBox(width: 40.0),
+                          Expanded(
+                            child: Divider(
+                              height: 0.5, 
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          const Text("Don't have an account?"),
+                          TextButton(
+                            onPressed: () {}, 
+                            child: const Text('Sign Up')
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                )
+              ),
+            ]
+          ),
         ),
       ),
     );
