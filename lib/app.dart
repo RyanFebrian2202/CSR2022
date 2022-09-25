@@ -22,12 +22,11 @@ class App extends StatelessWidget {
                       const Text(
                         'Log In',
                         style: TextStyle(
-                          fontFamily: 'Monospace',
-                          fontSize: 24
+                          fontSize: 45
                         ),
                       ),
                       const SizedBox(
-                        height:20.0
+                        height:35.0
                       ),
                       _usernameTextField(),
                       const SizedBox(
@@ -35,16 +34,18 @@ class App extends StatelessWidget {
                       ),
                       _passwordTextField(),
                       Row(
-                        children: const [
-                          Text(
-                            'Error',
-                            style: TextStyle(
-                              color: Colors.red
+                        children: [
+                          const Expanded(
+                            child: Text(
+                              'Error',
+                              style: TextStyle(
+                                color: Colors.red
+                              ),
                             ),
                           ),
                           TextButton(
-                            onPressed: null, 
-                            child: Text('Forgot Password?')
+                            onPressed: () {}, 
+                            child: const Text('Forgot Password?')
                           ),
                         ],
                       ),
@@ -79,6 +80,7 @@ class App extends StatelessWidget {
                         ],
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Text("Don't have an account?"),
                           TextButton(
@@ -105,7 +107,7 @@ class App extends StatelessWidget {
           vertical: 18.0, horizontal: 16.0
         ),
         filled: true,
-        fillColor: Colors.black,
+        fillColor: Color.fromARGB(255, 213, 213, 213),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.black,
@@ -136,7 +138,7 @@ class App extends StatelessWidget {
           vertical: 18.0, horizontal: 16.0
         ),
         filled: true,
-        fillColor: Colors.black,
+        fillColor: Color.fromARGB(255, 213, 213, 213),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.black,
